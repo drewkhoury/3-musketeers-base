@@ -5,7 +5,7 @@ You can use these files as a starting point for your next project.
 # Why this repo exists
 I found I was always trying to write the same functionality from scratch or copy/paste files from my other repos. I want to reduce the time I spend setting up new projects.
 
-![demo](demo.gif)
+![demo](demo-large.gif)
 
 # Features
 
