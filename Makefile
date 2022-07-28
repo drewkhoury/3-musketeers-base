@@ -26,7 +26,7 @@ _setup:
 
 #-- Misc
 .PHONY: sh
-sh: _env ## launch a container with a terminal for adhoc commands (/bin/bash)
+sh: _env ## launch a development container terminal
 	${COMPOSE_RUN} /bin/bash
 
 .PHONY: rebuild_img
@@ -34,7 +34,7 @@ rebuild_img: ## rebuild container images used by compose
 	${COMPOSE_BUILD}
 
 .PHONY: aws_configure
-aws_configure: ## configure aws credentials for this project using profile AWS_PROFILE_NAME
+aws_configure: ## configure aws profile using $AWS_PROFILE_NAME
 	${COMPOSE_RUN_GENERIC} aws configure --profile ${AWS_PROFILE_NAME}
 
 #-- Manage this Project
@@ -43,7 +43,7 @@ clean: ## clean cache files
 	echo 'do clean thing'
 
 .PHONY: deps
-deps: ## load dependencies, even if foo exists
+deps: ## load dependencies, even if foo/ exists
 	${COMPOSE_RUN} make _deps;
 .PHONY: deps_check
 deps_check:
