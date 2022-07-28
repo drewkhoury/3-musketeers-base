@@ -147,8 +147,8 @@ echo "${H2}---------- aws profile (~/.aws) ----------${NORMAL}
 ${C_INFO}~/.aws has been mounted from your workstation.${NORMAL}
 "
 
-read -p "Set AWS Profile Name ${C_VARNAME}AWS_PROFILE_NAME${NORMAL} [${C_DATA}${AWS_PROFILE_NAME}${NORMAL}]: " AWS_PROFILE_NAME
-AWS_PROFILE_NAME=${AWS_PROFILE_NAME:-this-repo-name}
+read -p "Set AWS Profile Name ${C_VARNAME}AWS_PROFILE_NAME${NORMAL} [${C_DATA}default${NORMAL}]: " AWS_PROFILE_NAME
+AWS_PROFILE_NAME=${AWS_PROFILE_NAME:-default}
 echo
 
 echo "checking for aws profile ${C_INFO}${AWS_PROFILE_NAME}${NORMAL}."
