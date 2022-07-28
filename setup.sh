@@ -48,7 +48,7 @@ ${C_H1}#########################################################################
 ${C_H1}################################# SETUP SCRIPT #################################${NORMAL}
 ${C_H1}################################################################################${NORMAL}
 
-Welcome to the static-site setup script!
+Welcome to the setup script!
 
 I am triggered when you do not have a ~/configs.env file.
 
@@ -148,7 +148,7 @@ ${C_INFO}~/.aws has been mounted from your workstation.${NORMAL}
 "
 
 read -p "Set AWS Profile Name ${C_VARNAME}AWS_PROFILE_NAME${NORMAL} [${C_DATA}${AWS_PROFILE_NAME}${NORMAL}]: " AWS_PROFILE_NAME
-AWS_PROFILE_NAME=${AWS_PROFILE_NAME:-static-site}
+AWS_PROFILE_NAME=${AWS_PROFILE_NAME:-this-repo-name}
 echo
 
 echo "checking for aws profile ${C_INFO}${AWS_PROFILE_NAME}${NORMAL}."
