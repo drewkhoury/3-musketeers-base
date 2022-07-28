@@ -162,8 +162,7 @@ if [[ $profile_status = *'could not be found'* ]]; then
 
   echo 'The set of permissions that have been tested for this repo, for bootstrap and deploy commands, are:
 
-- IAMFullAccess, AmazonSSMFullAccess, ecr:*
-- AmazonS3FullAccess, CloudFrontFullAccess, AmazonRoute53FullAccess, AWSCloudFormationFullAccess'
+- ...'
 
   echo
   read -p "Do you want to configure AWS credentials now? (y/n) " -n 1 -r
