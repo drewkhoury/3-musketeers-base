@@ -1,0 +1,45 @@
+version: '3.6'
+services:
+  base:
+    build: .
+    image: base   
+    working_dir: /opt/stack
+    env_file:
+      - configs.env
+    stdin_open: true
+    tty: true 
+    volumes:
+      - $PWD:/opt/stack
+      - ~/.aws/:/root/.aws:ro
+
+  app:
+    build: .
+    image: base   
+    working_dir: /opt/stack
+    env_file:
+      - configs.env
+    stdin_open: true
+    tty: true 
+    volumes:
+      - $PWD:/opt/stack
+    ports:
+      - "8080:8080"
+
+  setup:
+    build: .
+    image: base   
+    working_dir: /opt/stack
+    env_file:
+      - configs.env
+    stdin_open: true
+    tty: true 
+    volumes:
+      - $PWD:/opt/stack
+      - ~/.aws/:/root/.aws
+
+  aws:
+    image: amazon/aws-cli
+    stdin_open: true
+    tty: true     
+    volumes:
+      - ~/.aws/:/root/.aws  
